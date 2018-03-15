@@ -28,8 +28,8 @@
 
   formHandler.addInputHandler(Validation.isCompanyEmail);
 
-  remoteDS.getAll(function (serverResponse) {
-    serverResponse.forEach(function (order) {
+  remoteDS.getAll(function(serverResponse) {
+    serverResponse.forEach(function(order) {
       checkList.addRow(order);
     });
   });

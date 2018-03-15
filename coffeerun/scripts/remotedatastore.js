@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
   "use-strict";
 
   var App = window.App || {};
@@ -35,22 +35,22 @@
   };
 
   RemoteDataStore.prototype.getAll = function(cb) {
-    $.get(this.serverUrl, function (serverResponse) {
+    $.get(this.serverUrl, function(serverResponse) {
       console.log(serverResponse);
       cb(serverResponse);
     });
   };
 
   RemoteDataStore.prototype.get = function(key, cb) {
-    $.get(this.serverUrl + '/' + key, function (serverResponse) {
+    $.get(this.serverUrl + '/' + key, function(serverResponse) {
       console.log(serverResponse);
       cb(serverResponse);
     });
   };
 
   RemoteDataStore.prototype.remove = function(key) {
-      console.log("Entered remotedatastore remove. key: " + key);
-    $.get(this.serverUrl + '?emailAddress=' + key, function (serverResponse) {
+    console.log("Entered remotedatastore remove. key: " + key);
+    $.get(this.serverUrl + '?emailAddress=' + key, function(serverResponse) {
       console.log("ID of " + serverResponse[0].id);
       console.log(this);
       $.ajax(this.serverUrl + '/' + serverResponse[0].id, {
