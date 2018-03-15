@@ -1,5 +1,4 @@
 # CPSC-473-Assignment4
-CoffeeRun completed up to chapter 13
 
 Thank you for your help in completing this assignment Prof. Avery.
 
